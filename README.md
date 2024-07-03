@@ -37,8 +37,3 @@
     dbt debug
     ```
 
-![cover_image](img/dbt_run.png)
-
-![cover_image](img/dbt_seed.png)
-
-![cover_image](img/dbt_debug.png)

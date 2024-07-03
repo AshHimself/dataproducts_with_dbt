@@ -56,6 +56,9 @@ models:
         description: "Artist identifier key"
         tests:
           - not_null
+          - relationships:
+             to: ref('stg_artist')
+             field: artist_id
 
   - name: stg_artist
     description: "Contains list of album"
