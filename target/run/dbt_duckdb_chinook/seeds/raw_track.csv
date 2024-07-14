@@ -1,9 +1,7 @@
 
     
     
-    
-    create table "chinook"."main"."raw_track" ("track_id" integer,"name" text,"album_id" integer,"media_type_id" integer,"genre_id" integer,"composer" text,"milliseconds" integer,"bytes" integer,"unit_price" float8)
-  ;
+    truncate table "chinook"."main"."raw_track";
     -- dbt seed --
     
             insert into "chinook"."main"."raw_track" ("track_id", "name", "album_id", "media_type_id", "genre_id", "composer", "milliseconds", "bytes", "unit_price") values

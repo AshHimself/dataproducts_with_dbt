@@ -1,9 +1,7 @@
 
     
     
-    
-    create table "chinook"."main"."raw_playlist_track" ("playlist_id" integer,"track_id" integer)
-  ;
+    truncate table "chinook"."main"."raw_playlist_track";
     -- dbt seed --
     
             insert into "chinook"."main"."raw_playlist_track" ("playlist_id", "track_id") values

@@ -1,9 +1,7 @@
 
     
     
-    
-    create table "chinook"."main"."raw_genre" ("genre_id" integer,"name" text)
-  ;
+    truncate table "chinook"."main"."raw_genre";
     -- dbt seed --
     
             insert into "chinook"."main"."raw_genre" ("genre_id", "name") values

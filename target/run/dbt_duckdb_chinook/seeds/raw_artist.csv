@@ -1,9 +1,7 @@
 
     
     
-    
-    create table "chinook"."main"."raw_artist" ("artist_id" integer,"name" text)
-  ;
+    truncate table "chinook"."main"."raw_artist";
     -- dbt seed --
     
             insert into "chinook"."main"."raw_artist" ("artist_id", "name") values

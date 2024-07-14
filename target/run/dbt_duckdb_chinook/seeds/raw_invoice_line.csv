@@ -1,9 +1,7 @@
 
     
     
-    
-    create table "chinook"."main"."raw_invoice_line" ("invoice_line_id" integer,"invoice_id" integer,"track_id" integer,"unit_price" float8,"quantity" integer)
-  ;
+    truncate table "chinook"."main"."raw_invoice_line";
     -- dbt seed --
     
             insert into "chinook"."main"."raw_invoice_line" ("invoice_line_id", "invoice_id", "track_id", "unit_price", "quantity") values
