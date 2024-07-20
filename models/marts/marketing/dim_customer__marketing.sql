@@ -3,9 +3,9 @@
 WITH customer AS (
     SELECT
 
-        customer_id,            --HR owned data
-        first_name,             --HR owned data
-        last_name,              --HR owned data
+        hr.customer_id,            --HR owned data
+        hr.first_name,             --HR owned data
+        hr.last_name,              --HR owned data
         ltv,                    -- MARKETING owned data
         propensity_to_leave,    -- MARKETING owned data
         customer_segment,       -- MARKETING owned data
