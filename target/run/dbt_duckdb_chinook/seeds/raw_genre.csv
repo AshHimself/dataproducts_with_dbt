@@ -4,8 +4,7 @@
     truncate table "chinook"."main"."raw_genre";
     -- dbt seed --
     
-            insert into "chinook"."main"."raw_genre" ("genre_id", "name") values
-            (?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?),(?,?)
+          COPY "chinook"."main"."raw_genre" FROM '/Users/ashsmith/Documents/dev/dataproducts_with_dbt/seeds/raw_genre.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
         
 
 ;

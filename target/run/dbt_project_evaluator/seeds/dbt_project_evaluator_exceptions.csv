@@ -1,0 +1,11 @@
+
+    
+    
+    truncate table "chinook"."main"."dbt_project_evaluator_exceptions";
+    -- dbt seed --
+    
+          COPY "chinook"."main"."dbt_project_evaluator_exceptions" FROM '/Users/ashsmith/Documents/dev/dataproducts_with_dbt/dbt_packages/dbt_project_evaluator/seeds/dbt_project_evaluator_exceptions.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  

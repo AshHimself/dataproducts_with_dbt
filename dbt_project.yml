@@ -29,7 +29,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
-  duckdbchinook:
+  dbt_duckdb_chinook:
     staging:
       +pre-hook:
         - install 'httpfs'
@@ -37,8 +37,14 @@ models:
       +materialized: view
     intermediate:
       +materialized: table
-    obt:
+    marts:
       +materialized: table
+      engineering:
+        +schema: engineering
+      marketing:
+        +schema: marketing
+      human_resources:
+        +schema: human_resources
 
 dispatch:
   - macro_namespace: dbt

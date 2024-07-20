@@ -4,13 +4,27 @@
     
 
     create  table
-      "chinook"."main"."dim_customer__dbt_tmp"
+      "chinook"."main_human_resources"."dim_customer__dbt_tmp"
   
     as (
       
 
 WITH customer AS (
-    SELECT * FROM "chinook"."main"."stg_customer"
+    SELECT
+        customer_id,
+        first_name,
+        last_name,
+        company,
+        address,
+        city,
+        state,
+        country,
+        postal_code,
+        phone,
+        fax,
+        email
+
+    FROM "chinook"."main"."stg_customer"
 )
 
 SELECT * FROM customer
