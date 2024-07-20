@@ -1,4 +1,4 @@
-{{ config(materialized="table", alias = 'dim_customer') }}
+{{ config(materialized="table", alias = 'fct_customer') }}
 
 WITH customer AS (
     SELECT
