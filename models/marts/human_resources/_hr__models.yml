@@ -1,0 +1,60 @@
+groups:
+  - name: human_resources
+    owner:
+      name: Human Resources
+      email: elliot.anderson@chinook.com
+
+models:
+  - name: dim_customer
+    group: human_resources
+    access: public
+    description: "A consolidated table of customer information."
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: customer_id
+        description: "Unique identifier for each customer."
+        data_type: int
+        constraints:
+          - type: not_null
+          - type: unique
+      - name: first_name
+        description: "First name of the customer."
+        data_type: string
+        constraints:
+          - type: not_null
+      - name: last_name
+        description: "Last name of the customer."
+        data_type: string
+        constraints:
+          - type: not_null
+      - name: company
+        description: "Company name associated with the customer."
+        data_type: string
+      - name: address
+        description: "Street address of the customer."
+        data_type: string
+      - name: city
+        description: "City where the customer is located."
+        data_type: string
+      - name: state
+        description: "State where the customer is located."
+        data_type: string
+      - name: country
+        description: "Country where the customer is located."
+        data_type: string
+      - name: postal_code
+        description: "Postal code of the customer's location."
+        data_type: string
+      - name: phone
+        description: "Phone number of the customer."
+        data_type: string
+      - name: fax
+        description: "Fax number of the customer."
+        data_type: string
+      - name: email
+        description: "Email address of the customer."
+        data_type: string
+        constraints:
+          - type: not_null
