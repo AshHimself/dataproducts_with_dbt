@@ -2,6 +2,7 @@
 dbt_modules/
 dbt_packages/
 logs/
+target/
 venv/
 env/
 test.env
