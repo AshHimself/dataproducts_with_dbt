@@ -7,5 +7,8 @@
 # Install 
 
 
+## Data Domains
+![alt text](data_domains.svg)
+
 
 Credit: https://github.com/lerocha/chinook-database
