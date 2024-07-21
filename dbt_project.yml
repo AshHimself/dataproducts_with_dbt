@@ -45,7 +45,3 @@ models:
         +schema: marketing
       human_resources:
         +schema: human_resources
-
-dispatch:
-  - macro_namespace: dbt
-    search_order: ['dbt_project_evaluator', 'dbt']
