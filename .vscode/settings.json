@@ -1,0 +1,12 @@
+{
+  "dbt.dbtIntegration": "core",
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "DuckDB",
+      "name": "ash_local",
+      "database": "${workspaceFolder:dataproducts_with_dbt}/chinook.duckdb"
+    }
+  ],
+  "sqltools.useNodeRuntime": true
+}
