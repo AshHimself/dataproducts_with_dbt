@@ -1,0 +1,42 @@
+groups:
+  - name: marketing
+    owner:
+      name: Marketing Analytics Team
+      email: angela.moss@chinook.com
+
+models:
+  - name: fct_customer
+    group: marketing
+    access: public
+    description: "A consolidated table of customer data from HR and Marketing sources."
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: customer_id
+        description: "Unique identifier for each customer."
+        data_type: int
+        constraints:
+          - type: not_null
+      - name: first_name
+        description: "First name of the customer."
+        data_type: string
+        constraints:
+          - type: not_null
+      - name: last_name
+        description: "Last name of the customer."
+        data_type: string
+        constraints:
+          - type: not_null
+      - name: ltv
+        description: "Customer's lifetime value as provided by the Marketing system."
+        data_type: float
+      - name: propensity_to_leave
+        description: "Probability of the customer leaving, as provided by the Marketing system."
+        data_type: float
+      - name: customer_segment
+        description: "Segment classification of the customer based on Marketing criteria."
+        data_type: string
+      - name: engagement_score
+        description: "Score indicating customer engagement, as provided by the Marketing system."
+        data_type: float

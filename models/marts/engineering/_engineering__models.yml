@@ -1,0 +1,5 @@
+groups:
+  - name: engineering
+    owner:
+      name: Engineering Team
+      email: whiterose@chinook.com

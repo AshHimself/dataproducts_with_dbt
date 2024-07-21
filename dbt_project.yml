@@ -28,9 +28,22 @@ clean-targets:         # directories to be removed by `dbt clean`
 # In this example config, we tell dbt to build all models in the example/ directory
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
+
 models:
   dbt_duckdb_chinook:
     staging:
+      human_resources:
+        +schema: stg_human_resources
+        +group: human_resources
+        +access: private
+      engineering:
+        +schema: stg_engineering
+        +group: engineering
+        +access: private
+      marketing:
+        +schema: stg_marketing
+        +group: marketing
+        +access: private
       +pre-hook:
         - install 'httpfs'
         - load 'httpfs'
@@ -43,5 +56,7 @@ models:
         +schema: engineering
       marketing:
         +schema: marketing
+        +group: marketing
       human_resources:
         +schema: human_resources
+        +group: human_resources
